@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Patterns — Interactive Guide</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&family=Clash+Display:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="badge">🧩 DSA Pattern Mastery v2</div>
+            <div class="header-row">
+                <div>
+                    <h1>Stop Memorizing.<br><span class="hi">Recognize</span> the <span class="hi2">Pattern.</span></h1>
+                    <p class="subtitle">Every interview problem hides a known pattern. Learn to see it — with
+                        interactive visualizations, LeetCode links & pattern distinguishers.</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="progress-strip">
+            <span class="progress-label">Progress</span>
+            <div class="prog-track">
+                <div class="prog-fill" id="progFill" style="width:0%"></div>
+            </div>
+            <span class="prog-num" id="progNum">0 / 15</span>
+        </div>
+
+        <div class="controls">
+            <input class="search-box" type="text" placeholder="🔍  search patterns..." id="searchBox" />
+            <button class="fbtn active" data-f="all">All</button>
+            <button class="fbtn" data-f="easy">🟢 Easy</button>
+            <button class="fbtn" data-f="medium">🟡 Medium</button>
+            <button class="fbtn" data-f="hard">🔴 Hard</button>
+        </div>
+
+        <div class="grid" id="grid"></div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="overlay" id="overlay">
+        <div class="modal" id="modal">
+            <div class="modal-head">
+                <span class="mh-icon" id="mhIcon"></span>
+                <span class="mh-title" id="mhTitle"></span>
+                <div class="mh-actions">
+                    <a class="lc-link" id="lcLink" href="#" target="_blank" rel="noopener">🔗 LeetCode</a>
+                    <button class="learn-btn" id="learnBtn">✓ Mark Learned</button>
+                    <button class="close-x" id="closeX">✕</button>
+                </div>
+            </div>
+            <div class="tabs" id="tabsRow">
+                <div class="tab active" data-tab="overview">Overview</div>
+                <div class="tab" data-tab="distinguish">Distinguish</div>
+                <div class="tab" data-tab="visualize">Visualize</div>
+                <div class="tab" data-tab="code">Code</div>
+                <div class="tab" data-tab="problems">Problems</div>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
